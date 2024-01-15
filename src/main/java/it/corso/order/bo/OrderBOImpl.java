@@ -9,6 +9,7 @@ import it.corso.order.dto.Order;
 public class OrderBOImpl implements OrderBO {
 
 	private OrderDAO dao;
+	private String mysecret = "Password";
 
 	@Override
 	public boolean placeOrder(Order order) throws BOException {
@@ -29,7 +30,7 @@ public class OrderBOImpl implements OrderBO {
 	public boolean cancelOrder(int id) throws BOException {
 		try {
 			Order order = dao.read(id);
-			order.setStatus("cancelled");
+			order.setStatus("cancelled"+mysecret);
 			int result = dao.update(order);
 			if (result == 0) {
 				return false;

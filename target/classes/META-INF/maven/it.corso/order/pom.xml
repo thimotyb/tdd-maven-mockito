@@ -4,6 +4,11 @@
   <artifactId>order</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <properties>
+	  <sonar.organization>thimotyb-github</sonar.organization>
+	  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  </properties>
+  
   <distributionManagement>
     <repository>
       <id>nexus</id>
